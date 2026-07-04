@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employees - HRMS</title>
+
+  <link rel="stylesheet" href="employees.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- TOP HEADER -->
+  <header class="topbar">
+    <div>
+      <h1>Employees</h1>
+      <p>Manage your team efficiently</p>
+    </div>
+
+    <button onclick="openForm()">+ Add Employee</button>
+  </header>
+
+  <!-- SEARCH -->
+  <div class="search-box">
+    <input type="text" id="search" placeholder="Search employee..." onkeyup="searchEmployee()">
+  </div>
+
+  <!-- EMPLOYEE CARDS -->
+  <section class="card-grid" id="cardGrid">
+
+    <!-- JS inserts cards -->
+
+  </section>
+
+  <!-- TABLE -->
+  <section class="table-section">
+    <h2>Employee List</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Profile</th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody id="employeeTable">
+      </tbody>
+    </table>
+  </section>
+
+</div>
+
+<!-- ADD EMPLOYEE MODAL -->
+<div class="modal" id="empForm">
+  <div class="form-box">
+
+    <h2>Add Employee</h2>
+
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="role" placeholder="Role">
+
+    <button onclick="addEmployee()">Save</button>
+    <button onclick="closeForm()">Cancel</button>
+
+  </div>
+</div>
+
+<script src="../js/employees.js"></script>
+
+</body>
+</html>
