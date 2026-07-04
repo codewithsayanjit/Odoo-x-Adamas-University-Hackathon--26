@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HRMS Portal</title>
+
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<header>
+  <h2 class="logo">HRMS</h2>
+
+  <nav>
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+    <a onclick="goDashboard()">Dashboard</a>
+  </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+  <div class="hero-content">
+    <h1>Smart HR Management System</h1>
+    <p>Manage Employees, Attendance, Payroll, Leaves & Reports in one place</p>
+
+    <div class="buttons">
+
+      <a href="login.html" class="btn primary">Get Started</a>
+
+      <a href="register.html" class="btn secondary">Create Account</a>
+
+      <button onclick="goEmployees()" class="btn secondary">
+        View Employees
+      </button>
+
+    </div>
+
+    <button class="dash-btn" onclick="goDashboard()">
+      Go to Dashboard →
+    </button>
+
+  </div>
+
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="feature-card">👨‍💼 Employees</div>
+  <div class="feature-card">⏱ Attendance</div>
+  <div class="feature-card">💰 Payroll</div>
+  <div class="feature-card">📅 Leave System</div>
+  <div class="feature-card">📊 Reports</div>
+  <div class="feature-card">🔐 Secure Login</div>
+</section>
+
+<footer>
+  <p>© 2026 HRMS System | Built for Learning & Development</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+function goDashboard() {
+  const token = localStorage.getItem("token");
+
+  if (token) {
+    window.location.href = "pages/dashboard.html";
+  } else {
+    // Remember where the user wanted to go
+    localStorage.setItem("redirectAfterLogin", "pages/dashboard.html");
+
+    alert("Please login first");
+    window.location.href = "login.html";
+  }
+}
+
+function goEmployees() {
+  const token = localStorage.getItem("token");
+
+  if (token) {
+    window.location.href = "pages/employees.html";
+  } else {
+    // Remember where the user wanted to go
+    localStorage.setItem("redirectAfterLogin", "pages/employees.html");
+
+    alert("Please login first");
+    window.location.href = "login.html";
+  }
+}
+</script>
+
+</body>
+</html>
