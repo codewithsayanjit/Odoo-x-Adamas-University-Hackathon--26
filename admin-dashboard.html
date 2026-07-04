@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HRMS Admin Dashboard</title>
+
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<div class="layout">
+    <aside class="sidebar">
+    <div class="logo">
+      HRMS
+    </div>
+
+    <nav class="menu">
+      <a class="menu-item active" href="#">Dashboard</a>
+      <a class="menu-item" href="employees.html">Employees</a>
+      <a class="menu-item" href="attendance.html">Attendance</a>
+      <a class="menu-item" href="leave.html">Leave</a>
+      <a class="menu-item" href="payroll.html">Payroll</a>
+      <a class="menu-item" href="profile.html">Profile</a>
+      <a class="menu-item" href="settings.html">Settings</a>
+    </nav>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="title">
+        <h2>Dashboard</h2>
+        <p>Welcome back, Admin</p>
+      </div>
+
+      <div class="user-box">
+        <div class="avatar">A</div>
+      </div>
+    </header>
+
+    <!-- Stats -->
+    <section class="stats">
+
+      <div class="stat-card">
+        <h4>Total Employees</h4>
+        <span id="totalEmployees">0</span>
+      </div>
+
+      <div class="stat-card">
+        <h4>Present Today</h4>
+        <span>0</span>
+      </div>
+
+      <div class="stat-card">
+        <h4>On Leave</h4>
+        <span>0</span>
+      </div>
+
+      <div class="stat-card">
+        <h4>Payroll Pending</h4>
+        <span>0</span>
+      </div>
+
+    </section>
+
+    <!-- Table -->
+    <section class="table-card">
+      <div class="table-header">
+        <h3>Recent Employees</h3>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+          </tr>
+        </thead>
+
+        <tbody id="employeeTable">
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
