@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* =======================
+   BACKGROUND GLOW
+======================= */
+.bg-glow span {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.5;
+  animation: float 8s infinite alternate;
+}
+
+.bg-glow span:nth-child(1) {
+  background: #4f46e5;
+  top: 10%;
+  left: 10%;
+}
+
+.bg-glow span:nth-child(2) {
+  background: #06b6d4;
+  bottom: 10%;
+  right: 10%;
+}
+
+.bg-glow span:nth-child(3) {
+  background: #f97316;
+  top: 50%;
+  left: 50%;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(30px); }
+}
+
+/* =======================
+   HEADER
+======================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+nav a {
+  margin-left: 20px;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* =======================
+   HERO
+======================= */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  animation: fadeUp 1s ease;
+}
+
+.hero-content p {
+  color: #94a3b8;
+  margin-bottom: 25px;
+  animation: fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =======================
+   BUTTONS
+======================= */
+.buttons {
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 5px;
+  display: inline-block;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.secondary {
+  background: #10b981;
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.dash-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #06b6d4, #3b82f6);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dash-btn:hover {
+  transform: scale(1.05);
+}
+
+/* =======================
+   FEATURES
+======================= */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.feature-card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255,255,255,0.1);
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+}
